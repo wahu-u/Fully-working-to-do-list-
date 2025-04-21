@@ -20,6 +20,30 @@ void addTask(const char *task){
     length++;
     printf("task added");
 }
+void listTasks(){
+    char status;
+    for ( int i = 0; i < length; i++){
+        if (tasks[i].completed == 1)
+        {
+            status = 'd';
+
+        }else{
+            status='n';
+        }
+        printf("%d. %s [%c]\n",i+1,tasks[i].task,status);        
+    }
+    
+
+}
+void markedCompleted(int index){
+    if (index <= length && index > 0){
+        tasks[index - 1].completed = 1;
+        printf("Task marked as completed \n");
+    }else{
+        printf("Invalid index\n");
+    }
+    
+}
    
 int main(){
     printf("\nOptions\n");
