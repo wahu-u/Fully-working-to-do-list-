@@ -44,6 +44,21 @@ void markedCompleted(int index){
     }
     
 }
+
+void deletetask(int index){
+    if (index <= length && index > 0){
+        free(tasks[index - 1].task);
+        for (int i = index - 1; i < length - 1; i++){
+            tasks[i] = tasks[i + 1];
+        }
+        tasks = (Task *)realloc(tasks, (length - 1) * sizeof(Task));
+        lenght--;
+        printf("Task deleted\n");
+        }else{
+            printf("Invalid index\n");
+        }
+        
+    }
    
 int main(){
     printf("\nOptions\n");
