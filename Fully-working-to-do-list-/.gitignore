@@ -1,0 +1,19 @@
+to-do-list.exe
+# Ignore files related to VSCode, .NET, and other unnecessary directories
+.bash_history
+.cache/
+.vscode-server/
+.dotnet/
+.vscode/
+# Ignore .bash_history file
+.bash_history
+
+# Ignore cache and other development environment-related files
+.cache/
+.vscode-server/
+.dotnet/
+.vscode/
+.bash_history
+.dotnet/
+.vscode-server/
+
