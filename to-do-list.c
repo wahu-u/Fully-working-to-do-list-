@@ -60,11 +60,33 @@ void deletetask(int index){
         
     }
    
+void editTask(int index){
+    if (index <= && index > 0){
+        index = index - 1;
+
+        char *editedTask = (char *)realloc(tasks[index].task, strlen(task) + 1);
+
+        if (editedTask != NULL){
+            tasks[index].task = editedTask;
+            strcpy(tasks[length].task, task);
+            printf("Task updated successfully");
+        }else{
+            printf("Memory allocation failed");
+        }
+
+        } else {
+            printf("Invalid index\n");
+        }
+
+}
 int main(){
     printf("\nOptions\n");
     printf("1. Add a task\n");
-    
-
+    printf("2. List all tasks\n");
+    printf("3. Marked as complete\n");
+    printf("4.Edit task\n");
+    printf("5.Delete task\n");
+    printf("6.Exit\n");
 
     return 0;
 } 
